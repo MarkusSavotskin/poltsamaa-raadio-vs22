@@ -1,0 +1,217 @@
+// -------------------------------------------------------------------------
+// This file contains Contact Form 7 plugin fileds style.
+// -------------------------------------------------------------------------
+
+// Input fields
+// Select field
+// Checkbox
+// File input
+// Submit button
+// Alerts
+
+.wpcf7 {
+  .wpcf7-form {
+    // Input Fields
+    .wpcf7-form-control-wrap {
+      input[type='text'],
+      input[type='email'],
+      input[type='url'],
+      input[type='password'],
+      input[type='search'],
+      input[type='number'],
+      input[type='tel'],
+      input[type='range'],
+      input[type='date'],
+      input[type='month'],
+      input[type='week'],
+      input[type='time'],
+      input[type='datetime'],
+      input[type='datetime-local'],
+      input[type='color'],
+      textarea {
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem;
+        color: $color-text;
+        background-color: transparent;
+        border: 0.1rem solid $color-brand;
+
+        &:hover,
+        &:active,
+        &:focus {
+          border-color: $color-light-gray;
+        }
+
+        &.wpcf7-not-valid {
+          border-color: $color-error;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+      }
+    }
+
+    // Select field
+    .custom-select {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 1.3rem;
+        right: 1.5rem;
+        display: inline-block;
+        margin: auto 0;
+        color: $color-brand;
+        font-size: 1.4rem;
+        transform: rotate(90deg);
+        content: '❯';
+        pointer-events: none;
+      }
+
+      select {
+        width: 100%;
+        padding: 1.5rem 0;
+        padding-right: 3rem;
+        color: $color-text;
+        font-weight: normal;
+        font-size: 1.6rem;
+        border: 0.1rem solid $color-brand;
+        border-radius: 3.5rem;
+        appearance: none;
+        user-select: none;
+      }
+    }
+
+    // Checkbox
+    input[type='checkbox'] {
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
+      border: 0.1rem solid $color-brand;
+      cursor: pointer;
+      appearance: none;
+
+      &::after {
+        position: absolute;
+        display: none;
+        content: '';
+      }
+
+      &:checked::after {
+        top: -0.4rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 0.8rem;
+        height: 1.2rem;
+        margin: auto;
+        border: solid $color-brand;
+        border-width: 0 0.2rem 0.2rem 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    // File input
+    input[type='file'] {
+      width: 100%;
+      color: $color-gray;
+
+      &::-webkit-file-upload-button {
+        padding: 0.8rem 1.5rem;
+        color: $color-white;
+        background-color: $color-brand;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+
+    // Submit button
+    .submitBtn {
+      position: relative;
+
+      .wpcf7-submit {
+        @include smooth-animation;
+        padding: 2rem 6rem;
+        color: $color-white;
+        background-color: $color-brand;
+        transition: all 0.2s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          transform: scale(1.1);
+        }
+      }
+
+      .ajax-loader {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-left: 1rem;
+      }
+    }
+
+    // Alerts
+    .wpcf7-not-valid-tip {
+      margin-top: 0.5rem;
+      margin-left: 2rem;
+    }
+
+    .wpcf7-response-output {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      max-width: 50vw;
+      margin: 0;
+      padding: 1rem 3rem;
+      color: $color-white;
+      border: 0;
+      transform: translateX(100%);
+
+      @include small {
+        max-width: 80vw;
+      }
+    }
+
+    &.invalid,
+    &.sent {
+      .wpcf7-response-output {
+        animation: alertSlide 6s 1;
+      }
+    }
+
+    &.invalid {
+      .wpcf7-response-output {
+        background-color: $color-error;
+      }
+    }
+
+    &.sent {
+      .wpcf7-response-output {
+        background-color: $color-correct;
+      }
+    }
+
+    @keyframes alertSlide {
+      0% {
+        transform: translateX(100%);
+      }
+
+      20% {
+        transform: translateX(0);
+      }
+
+      80% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  }
+}

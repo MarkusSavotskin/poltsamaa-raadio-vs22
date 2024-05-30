@@ -1,0 +1,63 @@
+.social {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  svg {
+    color: $color-error;
+    background-color: $color-brand;
+    border-radius: 50%;
+  }
+}
+
+.share-icon {
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+
+    @include medium {
+      opacity: 1;
+    }
+  }
+
+  svg {
+    width: 6rem;
+    height: 6rem;
+    padding: 1.75rem 2.0073rem 1.65rem 1.6527rem;
+  }
+
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  margin-right: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .icon svg {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.85rem;
+  }
+
+  .icon:hover {
+    cursor: pointer;
+    opacity: 0.5;
+
+    @include medium {
+      opacity: 1;
+    }
+  }
+}

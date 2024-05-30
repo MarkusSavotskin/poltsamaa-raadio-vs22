@@ -1,0 +1,25 @@
+.coming-soon-left {
+  position: relative;
+}
+
+.coming-soon-middle {
+  @include medium {
+    padding: 0 2rem;
+  }
+}
+
+.coming-soon-right {
+  @include medium {
+    padding: 0 2rem 4rem;
+  }
+}
+
+.coming-soon-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.2rem;
+
+  @include medium {
+    margin-top: 0;
+  }
+}

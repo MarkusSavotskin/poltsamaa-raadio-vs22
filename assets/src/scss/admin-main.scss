@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+/*!
+Author: Markus Savotškin
+Author URI: 
+Version: 1
+*/
+
+// 1. Configuration and helpers
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base stuff
+@import 'base/base';
+
+.login {
+  @import 'base/reset';
+  @import 'base/typography';
+}
+
+// 3. Admin styles
+@import 'admin/admin-login';
+@import 'admin/admin-widget';
+@import 'admin/admin-editor';
+
+// 4. Blocks
+// @import 'blocks/ws-shadow-separator';

@@ -1,0 +1,79 @@
+// -------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -------------------------------------------------------------------------
+
+// Assets directory
+$assets: "assets/dist/img/";
+
+/// Breakpoints map
+$small: 700px !default;
+$small-landscape: 900px !default;
+$medium: 1000px !default;
+$medium-larger: 1200px !default;
+$larger-small: 1400px !default;
+$larger: 1920px !default;
+
+/// Orientations
+$orientation-landscape: landscape !default;
+
+/// Container's maximum width
+$max-width: 192rem !default;
+$max-width-wider: 176rem !default;
+$max-width-medium: 144rem !default;
+$max-width-smaller: 130rem !default;
+$max-width-mini: 100rem !default;
+
+/// Regular font family
+$font-body: 'Fira Sans', sans-serif !default;
+
+/// Brand colors
+$color-brand: var(--color-brand-primary);
+$color-secondary: var(--color-brand-secondary);
+$color-trietary: #8DA396 !default;
+$color-accent: var(--color-brand-accent);
+
+/// Page background color
+$color-bg: #EFF7FA !default;
+
+/// Text colors
+$color-text: var(--color-brand-text) !default;
+
+/// Link color
+$color-link: $color-text !default;
+
+/// Error color
+$color-error: #f44336 !default;
+
+/// Correct color
+$color-correct: #009f19 !default;
+
+/// More colors
+
+// White
+$color-white: #fff !default;
+
+// Black
+$color-black: #000 !default;
+
+//  Gray
+$color-gray: #7c8690 !default;
+
+//  Dark Gray
+$color-dark-gray: #4D545B !default;
+
+// Light Gray
+$color-light-gray: #E5F0EA !default;
+
+// Lighter Gray
+$color-lighter-gray: #F4F5F6 !default;
+
+// Light Gold
+$color-light-gold: #F2E1B1 !default;
+
+// Lighter Gold
+$color-lighter-gold: #FFF4D6 !default;
+
+/// Other variables
+// Border radiuses
+$border-rounded: 1rem !default;
+$border-round: 20rem !default;

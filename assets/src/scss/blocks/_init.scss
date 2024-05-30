@@ -1,0 +1,45 @@
+.block {
+  &__padded {
+  padding-top: var(--p-top-desktop);
+  padding-bottom: var(--p-bottom-desktop);
+
+    @include medium {
+      padding-top: var(--p-top-mobile);
+      padding-bottom: var(--p-bottom-mobile);
+    }
+  }
+
+  &__primary {
+    background: $color-brand;
+
+    > div {
+      background: $color-brand;
+
+      * {
+        color: $color-lighter-gold;
+      }
+    }
+  }
+
+  &__secondary {
+    background: $color-secondary;
+
+    > div {
+      background: $color-secondary;
+    }
+  }
+
+  &__accent {
+    background: $color-accent;
+
+    > div {
+      background: $color-accent;
+    }
+  }
+
+  &__gradient {
+    > div {
+      background: linear-gradient(93deg, #EEF5F1 0%, #FEFAEF 100%);
+    }
+  }
+}

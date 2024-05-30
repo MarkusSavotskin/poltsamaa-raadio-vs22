@@ -1,0 +1,240 @@
+// -------------------------------------------------------------------------
+// This file contains basic styles.
+// -------------------------------------------------------------------------
+
+/* stylelint-disable */
+html:not(.wp-toolbar),
+html.interface-interface-skeleton__html-container {
+  box-sizing: border-box;
+  font-size: 0.625rem;
+
+  @media screen and (min-width: $small) and (max-width: 1919px) {
+    font-size: calc(0.3rem + 0.28vw);
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: calc(0.3rem + 1vw);
+  }
+}
+
+/* stylelint-enable */
+
+body:not(.wp-admin) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-bg;
+  -webkit-font-smoothing: antialiased;
+
+  .site {
+    position: relative;
+    flex: 1;
+  }
+}
+
+.site-content {
+  &--default {
+    margin-top: 10rem;
+
+    @include medium {
+      margin-top: 12rem;
+    }
+  }
+}
+
+.max--width {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  .site-content & {
+    padding-right: 8rem;
+    padding-left: 8rem;
+
+    @include medium {
+      padding-right: 4rem;
+      padding-left: 4rem;
+    }
+
+    @include medium {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+  }
+}
+
+/* stylelint-disable */
+
+.max--width--full {
+  margin: 0 auto;
+  width: 100%;
+
+  .max--width & {
+    max-width: calc(100% + 8rem);
+    width: calc(1920px + 8rem);
+    margin-left: -4rem;
+  }
+}
+
+/* stylelint-enable */
+.max--width--wider {
+  max-width: $max-width-wider;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @include larger-small {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  @include small {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.max--width--medium {
+  max-width: $max-width-medium;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @include larger-small {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  @include small {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.max--width--smaller {
+  max-width: $max-width-smaller;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @include larger-small {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  @include small {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.max--width--mini {
+  max-width: $max-width-mini;
+  margin: 0 auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @include larger-small {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  @include small {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.overflow--disable {
+  overflow: hidden;
+}
+
+.desktop--only {
+  @include medium {
+    display: none;
+  }
+}
+
+.touch--only {
+  display: none;
+
+  @include medium {
+    display: block;
+  }
+}
+
+.mobile--only {
+  display: none;
+
+  @include small {
+    display: block;
+  }
+}
+
+.screen-reader-text {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  margin: -0.1rem;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal !important;
+  border: 0;
+  clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+  clip-path: inset(50%);
+}
+
+.page--background {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  max-height: 600rem;
+  background-image: url('assets/dist/img/svg/page-bg.svg');
+  background-repeat: repeat;
+  background-position: top 5rem left 0;
+  background-size: cover;
+}
+
+.page--shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: none;
+
+  &.visible {
+    opacity: 0.5;
+    pointer-events: all;
+  }
+}
+
+.grecaptcha-badge {
+  right: -26rem !important;
+}
+
+.wp-block-columns.flex--reverse--mobile {
+  @include small {
+    flex-direction: column-reverse;
+  }
+}
+
+body.search {
+  width: 100%;
+}
+
+.entry-title {
+  font-weight: 700;
+}
+
+.padding {
+  &__bottom {
+    &--10 {
+      padding-bottom: 10rem;
+    }
+  }
+}

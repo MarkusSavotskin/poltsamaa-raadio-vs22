@@ -1,0 +1,121 @@
+// -------------------------------------------------------------------------
+// Basic typography style for copy text
+// -------------------------------------------------------------------------
+
+body {
+  color: $color-brand;
+  font-weight: 300;
+  font-size: 1.6rem;
+  font-family: $font-body;
+  line-height: 1;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-brand;
+  line-height: 1;
+  word-break: break-word;
+}
+
+h1,
+.h1 {
+  font-weight: 700;
+  font-size: 6.4rem;
+  font-style: normal;
+  line-height: 120%;
+
+  @include small {
+    font-size: 4rem;
+  }
+}
+
+h2,
+.h2 {
+  color: $color-secondary;
+  font-weight: 600;
+  font-size: 4.8rem;
+  line-height: 120%;
+
+  @include small {
+    font-size: 3rem;
+  }
+}
+
+h3,
+.h3 {
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 120%;
+
+  @include small {
+    font-size: 2rem;
+  }
+}
+
+h4,
+.h4 {
+  font-weight: 600;
+  font-size: 2rem;
+
+  @include small {
+    font-size: calc(2rem - 20%);
+  }
+}
+
+h5,
+.h5 {
+  font-weight: 600;
+  font-size: 1.8rem;
+
+  @include small {
+    font-size: calc(1.8rem - 20%);
+  }
+}
+
+h6,
+.h6 {
+  font-weight: 600;
+  font-size: 1.6rem;
+
+  @include small {
+    font-size: calc(1.6rem - 20%);
+  }
+}
+
+p,
+a,
+span,
+input,
+input::placeholder,
+textarea {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 140%;
+}
+
+button {
+  color: $color-text;
+  font-size: 1.8rem;
+  line-height: 140%;
+}
+
+a {
+  &:not(.button):not(.card):not(.site-header__buttons--button) {
+    transition: color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $color-brand;
+      text-decoration: underline;
+    }
+  }
+}

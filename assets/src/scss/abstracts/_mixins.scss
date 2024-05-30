@@ -1,0 +1,69 @@
+// -------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -------------------------------------------------------------------------
+
+@mixin smooth-animation {
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin remove-margin-left-right {
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@mixin remove-margin-top-bottom {
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin small-landscape {
+  @media screen and (max-width: $small-landscape) and (orientation: $orientation-landscape) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin medium-larger {
+  @media screen and (max-width: $medium-larger) {
+    @content;
+  }
+}
+
+@mixin larger-small {
+  @media screen and (max-width: $larger-small) {
+    @content;
+  }
+}
+
+@mixin larger {
+  @media screen and (max-width: $larger) {
+    @content;
+  }
+}
+
+@mixin custom-breakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

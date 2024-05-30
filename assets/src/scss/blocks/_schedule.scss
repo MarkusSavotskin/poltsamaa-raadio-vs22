@@ -1,0 +1,116 @@
+.schedule {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 20rem;
+
+    @include medium {
+      gap: 10rem
+    }
+
+    @include small {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    @include small {
+      align-items: center;
+    }
+
+    &--title {
+      margin: 0 !important;
+      color: $color-secondary;
+      font-weight: 700;
+      font-size: 4.8rem;
+      line-height: 140%;
+      text-transform: uppercase;
+    }
+
+    &--date {
+      margin: 0 !important;
+      color: $color-text;
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 140%;
+    }
+
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    &--content {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+
+      @include small {
+        gap: 2rem;
+      }
+    }
+
+    &--digit {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      width: 8rem;
+      color: $color-brand;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include small {
+        width: 6rem;
+        font-size: 2rem;
+      }
+    }
+
+    &--separator {
+      color: $color-text;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include small {
+        font-size: 2rem;
+      }
+    }
+
+    &--title {
+      color: $color-text;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include small {
+        font-size: 2rem;
+      }
+    }
+
+    &--description {
+      * {
+        margin: 0 !important;
+        color: $color-text !important;
+        font-weight: 400 !important;
+        font-size: 2.4rem !important;
+        line-height: 140% !important;
+
+        @include small {
+          font-size: 1.8rem !important;
+        }
+      }
+    }
+  }
+}

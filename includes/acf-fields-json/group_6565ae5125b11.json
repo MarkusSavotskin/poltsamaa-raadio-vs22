@@ -1,0 +1,48 @@
+{
+    "key": "group_6565ae5125b11",
+    "title": "Menu settings",
+    "fields": [
+        {
+            "key": "field_6565ae511e72e",
+            "label": "Enable mega menu",
+            "name": "enable_megamenu",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Enable \/ disable this field only for most top menu items. Do not use it on children items! For Services custom post type the mega menu will be activated automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "- MENU SETTINGS",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1708945386,
+    "local_file": "\/data01\/virt108664\/domeenid\/www.dev.wsys.ee\/htdocs\/dev\/psyhiaatriakeskus\/wp-content\/themes\/psyhiaatriakeskus\/includes\/acf-fields-json\/group_6565ae5125b11.json"
+}

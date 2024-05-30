@@ -1,0 +1,39 @@
+.gallery {
+  position: relative;
+  display: block;
+}
+
+.badge-container {
+  position: absolute;
+  bottom: 5rem;
+  left: 100%;
+  z-index: 1;
+  transform: translateX(-50%);
+
+  @include medium {
+    right: 3rem;
+    bottom: auto;
+    left: auto;
+    transform: translateY(-50%);
+  }
+
+  &__badge {
+    width: 28rem;
+    height: 28rem;
+    animation: spin 60s linear infinite;
+
+    @include small {
+      width: 16rem;
+      height: 16rem;
+    }
+  }
+}
+
+.splide__slide {
+  height: 100vh;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

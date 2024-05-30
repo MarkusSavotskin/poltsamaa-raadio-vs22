@@ -1,0 +1,236 @@
+{
+    "key": "group_64da3ceb42836",
+    "title": "Page settings",
+    "fields": [
+        {
+            "key": "field_655668b2520c8",
+            "label": "Page container",
+            "name": "page_container",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "This option removes page title.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64de2117204b0",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "max--width--mini": "Width 960px",
+                "max--width--smaller": "Width 1260px",
+                "max--width--medium": "Width 1400px",
+                "max--width--wider": "Width 1600px",
+                "max--width": "Width 1920px",
+                "max--width--full": "Width 100%"
+            },
+            "default_value": "max--width--smaller",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64da3ceb40a83",
+            "label": "Remove page title",
+            "name": "remove_page_title",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This option removes page title.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64de2117204b0",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6556775f81d55",
+            "label": "Remove page breadcrumbs",
+            "name": "remove_page_breadcrumbs",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This option removes breadcrumbs.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_65567df7e65c3",
+            "label": "Remove footer top image",
+            "name": "remove_footer_top_image",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_6554fb86df6bf",
+            "label": "Page title image",
+            "name": "page_title_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64da3ceb40a83",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_64de2117204b0",
+            "label": "Enable custom page title",
+            "name": "enable_custom_page_title",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This option removes page title.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64da3ceb40a83",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_64de216308003",
+            "label": "Custom page title",
+            "name": "custom_page_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64de2117204b0",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "teenus"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "PAGE SETTINGS",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1708945386,
+    "local_file": "\/data01\/virt108664\/domeenid\/www.dev.wsys.ee\/htdocs\/dev\/psyhiaatriakeskus\/wp-content\/themes\/psyhiaatriakeskus\/includes\/acf-fields-json\/group_64da3ceb42836.json"
+}

@@ -1,0 +1,328 @@
+{
+    "key": "group_64d0e3b93fd41",
+    "title": "Block settings",
+    "fields": [
+        {
+            "key": "field_64d0e64e2d8ff",
+            "label": "Block settings",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_64d224de39039",
+            "label": "Block background",
+            "name": "block_background",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 1,
+            "choices": {
+                "block__transparent": "Transparent background",
+                "block__primary": "Primary color background",
+                "block__secondary": "Secondary color background",
+                "block__accent": "Accent color background",
+                "block__gradient": "Gradient background"
+            },
+            "default_value": "block__transparent",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_64d0e5a850a59",
+            "label": "Block content width",
+            "name": "block_content_width",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "choices": {
+                "max--width--mini": "Width 960px",
+                "max--width--smaller": "Width 1260px",
+                "max--width--medium": "Width 1400px",
+                "max--width--wider": "Width 1720px",
+                "max--width": "Width 1920px",
+                "max--width--full": "Width 100%"
+            },
+            "default_value": "max--width--smaller",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65045ac96d1f0",
+            "label": "Spacing",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "message": "Adjust top and bottom paddings between sections.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_64d1f0f8b952d",
+            "label": "Block custom top \/ bottom paddings",
+            "name": "block_custom_top_bottom_paddings",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_64d1f12ab952e",
+            "label": "Block custom top padding (desktop)",
+            "name": "block_custom_top_padding_desktop",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "1 rem = 10 px",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64d1f0f8b952d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 16,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "rem"
+        },
+        {
+            "key": "field_64d1f17cb952f",
+            "label": "Block custom bottom padding (desktop)",
+            "name": "block_custom_bottom_padding_desktop",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "1 rem = 10 px",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64d1f0f8b952d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 16,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "rem"
+        },
+        {
+            "key": "field_650458f304564",
+            "label": "Block custom top padding (mobile)",
+            "name": "block_custom_top_padding_mobile",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "1 rem = 10 px",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64d1f0f8b952d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 8,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "rem"
+        },
+        {
+            "key": "field_650458e404563",
+            "label": "Block custom bottom padding (mobile)",
+            "name": "block_custom_bottom_padding_mobile",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "1 rem = 10 px",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64d1f0f8b952d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "default_value": 8,
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": "rem"
+        },
+        {
+            "key": "field_64d1f19fb9530",
+            "label": "Disable block top padding",
+            "name": "disable_block_top_padding",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64d1f0f8b952d",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_64d1f1c5b9531",
+            "label": "Disable block bottom padding",
+            "name": "disable_block_bottom_padding",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64d1f0f8b952d",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "GUTENBERG BLOCK SETTINGS",
+    "show_in_rest": 0,
+    "acfml_field_group_mode": "advanced",
+    "modified": 1708945386
+}

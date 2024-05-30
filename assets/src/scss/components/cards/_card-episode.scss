@@ -1,0 +1,79 @@
+.card {
+  &__episode {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background-color: $color-white;
+    border-radius: 2rem;
+    box-shadow: 0 .4rem 2rem 0 rgba(0, 0, 0, .1);
+    transition: all 0.2s ease-in-out;
+
+    @include small {
+      gap: 2rem;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+      cursor: pointer;
+
+      .card__episode--overlay {
+        opacity: 1;
+      }
+
+      .card__episode--image {
+        transform: scale(1.04);
+      }
+    }
+
+    &--image-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: $border-rounded;
+    }
+
+    
+    &--image {
+      width: 100%;
+      height: 20rem;
+      object-fit: cover;
+      object-position: center;
+      transition: all 0.2s ease-in-out;
+
+      @include medium {
+        height: 30rem;
+      }
+
+      @include medium {
+        height: 20rem;
+      }
+    }
+
+    &--overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color-black, 0.4);
+      background-image: url('assets/dist/img/svg/play-blue.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20%;
+      border-radius: $border-rounded;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &--title {
+      text-align: center;
+
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.card {
+  &__member-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    max-width: 30rem;
+
+    @include small {
+      max-width: 15rem;
+    }
+
+    &--portrait {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      width: 30rem;
+      height: 40rem;
+      overflow: hidden;
+      background-color: $color-white;
+      border-radius: $border-round;
+      box-shadow: 0 .4rem 2rem 0 rgba(0, 0, 0, .1);
+      
+      @include small {
+        max-width: 15rem;
+        max-height: 20rem;
+      }
+
+      &:hover {
+        .card__member-top--image {
+          transform: scale(1.04);
+        }
+      }
+    }
+
+    &--image {
+      width: 100%;
+      height: 90%;
+      object-fit: cover;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--title {
+      text-align: center;
+    }
+  }
+}

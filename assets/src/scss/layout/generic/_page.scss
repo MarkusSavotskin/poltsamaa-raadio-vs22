@@ -1,0 +1,9 @@
+.page {
+  &__banner {
+    //padding-top: 6rem;
+
+    @include small {
+      padding-top: 2rem;
+    }
+  }
+}

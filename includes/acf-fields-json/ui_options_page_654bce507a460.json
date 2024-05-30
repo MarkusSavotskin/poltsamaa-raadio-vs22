@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_654bce507a460",
+    "title": "Teema seaded",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Teema seaded",
+    "menu_slug": "teema-seaded",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-admin-site",
+    "menu_title": "Üldseaded",
+    "position": 100,
+    "redirect": 0,
+    "description": "",
+    "update_button": "Uuenda",
+    "updated_message": "Teema seaded on uuendatud",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1699467106
+}

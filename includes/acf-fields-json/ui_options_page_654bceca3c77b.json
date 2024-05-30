@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_654bceca3c77b",
+    "title": "Päis",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Päis",
+    "menu_slug": "pais",
+    "parent_slug": "teema-seaded",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Päis",
+    "position": 1,
+    "redirect": false,
+    "description": "",
+    "update_button": "Uuenda",
+    "updated_message": "Päise seaded on uuendatud",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "_parent": 30,
+    "modified": 1699467228
+}

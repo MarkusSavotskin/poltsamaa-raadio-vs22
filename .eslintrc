@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "php_object": "readonly"
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-unused-vars": 2,
+    "no-console": 0,
+    "func-names": ["error", "never"],
+    "no-new": 0,
+    "class-methods-use-this": 0
+  }
+}

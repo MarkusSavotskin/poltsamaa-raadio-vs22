@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 8rem;
+  text-align: left;
+
+  @include medium {
+    text-align: center;
+  }
+
+  @include small {
+    margin-top: 15rem;
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+}

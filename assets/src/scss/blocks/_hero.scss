@@ -1,0 +1,89 @@
+.hero {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgb(11, 51, 81) 0%, rgba(11, 51, 81, 0.6) 20%, rgba(0, 212, 255, 0) 100%);
+      content: '';
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100vh !important;
+    margin: 0 !important;
+    object-fit: cover;
+  }
+
+  &__inner {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: flex-start;
+    padding: 0 13rem;
+
+    @include small {
+      gap: 4rem;
+      padding: 0 2rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &--title,
+    &--subtitle,
+    &--text {
+      margin: 0 !important;
+      color: $color-white;
+      text-shadow: 2px 4px 10px rgba(0,0,0,0.7);
+    }
+
+    &--title {
+      font-weight: 700;
+      font-size: 6.4rem;
+      line-height: 120%;
+
+      @include small {
+        font-size: 4rem;
+      }
+    }
+    
+    &--subtitle {
+      font-weight: 600;
+      font-size: 4.8rem;
+      line-height: 120%;
+
+      @include small {
+        font-size: 3rem;
+      }
+    }
+
+    &--text {
+      font-weight: 500;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include small {
+        font-size: 2rem;
+      }
+    }
+  }
+}

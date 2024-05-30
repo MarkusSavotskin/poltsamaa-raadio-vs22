@@ -1,0 +1,356 @@
+// -------------------------------------------------------------------------
+// This file contains styles for Wordpress content
+// -------------------------------------------------------------------------
+
+/// Contents
+// Heading
+// Paragraph
+// Button
+// Image
+// Quote
+// List
+// Separator
+// Preformatted
+// Gallery
+// Table
+// File
+// Videos
+// Alignment
+// Custom styles
+
+/// Variables
+$entry-line-height: 140%;
+$entry-font-size: 1.8rem;
+$enrty-margin-top-bottom: 3rem 0;
+
+.entry-content,
+.entry-section {
+  // Heading
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 4rem 0;
+    line-height: 1.2;
+  }
+
+  h1,
+  .h1 {
+    font-size: 6.4rem;
+    line-height: 120%;
+
+    @include small {
+      font-size: 4rem;
+    }
+  }
+
+  h2,
+  .h2 {
+    font-size: 4.8rem;
+    line-height: 120%;
+
+    @include small {
+      font-size: 3rem;
+    }
+  }
+
+  h3,
+  .h3 {
+    font-size: 3.2rem;
+    line-height: 140%;
+
+    @include small {
+      font-size: 2rem;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 3.5rem;
+
+    @include small {
+      font-size: calc(3.5rem - 70%);
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: 3rem;
+
+    @include small {
+      font-size: calc(3rem - 50%);
+    }
+  }
+
+  h6,
+  .h6 {
+    font-size: 2.5rem;
+
+    @include small {
+      font-size: calc(2.5rem - 50%);
+    }
+  }
+
+  // Paragraph
+  p {
+    margin: $enrty-margin-top-bottom;
+    font-weight: 400;
+    font-size: $entry-font-size;
+    line-height: $entry-line-height;
+
+    > * {
+      margin: 0 !important;
+    }
+  }
+
+  .wp-block-button {
+    @include remove-margin-left-right;
+    margin: 1rem 0.5rem;
+
+    a {
+      color: $color-white;
+      background-color: $color-brand;
+    }
+  }
+
+  // Image
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: $enrty-margin-top-bottom;
+  }
+
+  // Quote
+  blockquote:not(.is-style-large) {
+    margin: $enrty-margin-top-bottom;
+    padding-left: 5rem;
+    font-size: $entry-font-size;
+    line-height: $entry-line-height;
+    border-left: 1.5rem solid $color-brand;
+  }
+
+  blockquote.is-style-large {
+    margin: $enrty-margin-top-bottom;
+    padding: 4rem 0;
+    font-size: $entry-font-size;
+    line-height: $entry-line-height;
+    border-top: 0.6rem solid $color-brand;
+    border-bottom: 0.6rem solid $color-brand;
+
+    p {
+      margin: 0;
+      font-weight: bold;
+      font-size: 5rem;
+      font-style: italic;
+      line-height: 1.2;
+      text-align: left;
+
+      @include small {
+        font-size: calc(5rem - 90%);
+      }
+    }
+
+    cite {
+      display: block;
+      margin-top: 2.2rem;
+      font-weight: bold;
+      font-size: 2rem;
+      text-align: left;
+    }
+  }
+
+  // List
+  ul {
+    margin: $enrty-margin-top-bottom;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin: 1rem 0;
+      padding-left: 2rem;
+      font-weight: 400;
+      font-size: $entry-font-size;
+      line-height: $entry-line-height;
+
+      &::before {
+        position: absolute;
+        display: block;
+        margin-left: -2rem;
+        content: '›';
+      }
+    }
+
+    &.children {
+      margin-bottom: 2rem;
+    }
+  }
+
+  ol {
+    margin: $enrty-margin-top-bottom;
+    list-style: decimal;
+
+    li {
+      margin: 1rem 0;
+      font-size: $entry-font-size;
+      line-height: $entry-line-height;
+      list-style-type: none;
+      counter-increment: item;
+
+      &::before {
+        display: inline-block;
+        width: 2.7rem;
+        padding-right: 1rem;
+        font-weight: bold;
+        text-align: right;
+        content: counter(item) '.';
+      }
+    }
+  }
+
+  // Separator
+  hr {
+    margin: $enrty-margin-top-bottom;
+    color: $color-gray;
+
+    &.is-style-wide {
+      margin-right: calc((-100vw + 100%) / 2);
+      margin-left: calc((-100vw + 100%) / 2);
+      padding-right: calc((100vw - 100%) / 2);
+      padding-left: calc((100vw - 100%) / 2);
+    }
+
+    &.is-style-dots {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-top: 0.1rem dashed $color-gray;
+        content: '';
+      }
+    }
+  }
+
+  // Preformatted
+  pre {
+    font-size: $entry-font-size;
+    white-space: pre-wrap;
+
+    b,
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  // Gallery
+  .wp-block-cover,
+  .wp-block-cover-image {
+    margin: $enrty-margin-top-bottom;
+  }
+
+  .wp-block-gallery {
+    .wp-block-image {
+      max-width: inherit;
+    }
+
+    img {
+      margin: 0;
+    }
+
+    li {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  // Table
+  .wp-block-table {
+    width: 100%;
+    margin-top: 5rem;
+
+    thead {
+      tr {
+        border-bottom: 0.1rem solid $color-gray;
+
+        th {
+          padding: 2.2rem 0;
+          font-size: $entry-font-size;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 0.1rem solid $color-gray;
+
+        td {
+          padding: 1.5rem 0;
+          font-size: $entry-font-size;
+        }
+      }
+    }
+  }
+
+  // File
+  .wp-block-file {
+    margin: $enrty-margin-top-bottom;
+  }
+
+  // Videos
+  .is-type-video {
+    margin: $enrty-margin-top-bottom;
+
+    iframe {
+      width: 100%;
+      min-height: 45rem;
+    }
+  }
+
+  /// Blocks alignment
+  // .alignwide {
+  //   margin-right: -25rem;
+  //   margin-left: -25rem;
+
+  //   @include small {
+  //     margin-right: 0;
+  //     margin-left: 0;
+  //   }
+  // }
+
+  // .alignfull {
+  //   margin-right: calc((-100vw + 100%) / 2);
+  //   margin-left: calc((-100vw + 100%) / 2);
+  // }
+
+  /// Custom styles
+  // Wrap in mobile gutenber columns reverse order
+  .wp-block-columns {
+    &.wrap--reverse {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  // Wrap in mobile gutenber media and text block columns reverse order
+  .wp-block-media-text {
+    &.has-media-on-the-right {
+      .wp-block-media-text__media {
+        @include small {
+          grid-row: 2;
+        }
+      }
+      .wp-block-media-text__content {
+        @include small {
+          grid-row: 1;
+        }
+      }
+    }
+  }
+}

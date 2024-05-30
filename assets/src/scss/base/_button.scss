@@ -1,0 +1,84 @@
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 3rem 5rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 120%;
+  text-decoration: none;
+  border: 4px solid;
+  border-radius: 3rem;
+  transition: .2s ease-in-out;
+
+  @include small {
+    padding: 2rem;
+    font-size: 1.6rem;
+    border-radius: 2rem;
+  }
+
+  &--primary-filled {
+    color: $color-white;
+    background-color: $color-brand;
+    border-color: $color-brand !important;
+
+    &:hover,
+    &:focus {
+      color: $color-brand;
+      background-color: $color-secondary;
+      border-color: $color-secondary !important;
+    }
+  }
+
+  &--secondary-filled {
+    color: $color-brand;
+    background-color: $color-secondary;
+    border-color: $color-secondary !important;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+      background-color: $color-brand;
+      border-color: $color-brand !important;
+    }
+  }
+
+  &--condensed {
+    padding: 1.5rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 120%;
+    text-transform: none;
+    border: 2px solid;
+    ;
+    border-radius: 1.6rem;
+
+    @include small {
+      padding: 1rem;
+    }
+  }
+
+  &--back {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 4rem;
+
+    &::before {
+      width: 1rem;
+      height: 1.2rem;
+      background-image: url('assets/dist/img/svg/chevron-left-white.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: all 0.2s ease-in-out;
+      content: '';
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('assets/dist/img/svg/chevron-left-blue.svg');
+      }
+    }
+  }
+}

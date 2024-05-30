@@ -1,0 +1,78 @@
+.card {
+  &__schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+
+    &--top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--day {
+      color: $color-secondary;
+      line-height: 140%;
+      text-transform: uppercase;
+    }
+
+    &--date {
+      color: $color-text;
+      line-height: 140%;
+    }
+
+    &--bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    &--row {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: 2rem;
+    }
+
+    &--time {
+      width: 6rem;
+      color: $color-brand;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include small {
+        width: 4rem;
+        font-size: 2rem;
+      }
+    }
+
+    &--show {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--title {
+      color: $color-text;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 140%;
+
+      @include small {
+        font-size: 2rem;
+      }
+    }
+
+    &--description {
+      * {
+        font-weight: 400 !important;
+        font-size: 2.4rem !important;
+        line-height: 140% !important;
+
+        @include small {
+          font-size: 1.8rem !important;
+        }
+      }
+    }
+  }
+}

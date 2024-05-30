@@ -1,0 +1,156 @@
+.archive {
+  &__section {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+
+    @include small {
+      padding-top: 2rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+
+    &--schedule {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12rem 3rem;
+
+      @include medium {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include small {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        justify-items: center;
+      }
+    }
+
+    &--supporter {
+      grid-template-columns: 1fr;
+      gap: 10rem;
+
+      @include small {
+        gap: 4rem;
+      }
+
+      &--company {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 30rem;
+          height: auto;
+          object-fit: contain;
+          transition: all 0.2s ease-in-out;
+
+          @include small {
+            max-width: 15rem;
+          }
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      &--person {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 4rem 2rem;
+
+        @include medium {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        @include small {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        h3 {
+          text-align: center;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+            cursor: default;
+          }
+        }
+      }
+    }
+
+    &--members {
+      grid-template-columns: 1fr;
+      gap: 6rem;
+
+      &--top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6rem;
+        justify-content: center;
+
+        @include medium {
+          gap: 2rem;
+          justify-content: space-around;
+        }
+      }
+
+      &--bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 5rem;
+
+        @include medium {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        @include small {
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 3rem;
+        }
+      }
+    }
+
+    &--posts {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+
+      @include medium-larger {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+      }
+
+      @include medium {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include small {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--shows {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+
+      @include medium-larger {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+      }
+
+      @include medium {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include small {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

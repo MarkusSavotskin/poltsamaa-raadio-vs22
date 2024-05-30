@@ -1,0 +1,124 @@
+.form {
+
+  &__desc {
+    margin-bottom: 5rem;
+    color: $color-brand;
+  }
+
+  &__form-fields {
+    visibility: visible;
+    opacity: 1;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__fields-1,
+  &__fields-2 {
+    display: flex;
+    flex-direction: row;
+
+    @include small {
+      flex-direction: column;
+    }
+  }
+
+  &__fields-1 {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__fields-2 {
+    gap: 3rem;
+    justify-content: flex-end;
+  }
+}
+
+.input-field {
+  width: 50%;
+
+  @include small {
+    width: 100%;
+  }
+
+  p span input,
+  p span select {
+    width: 100%;
+    padding: 2.4rem;
+    border: 2px solid $color-brand;
+  }
+
+  p span select {
+    padding: 2.55rem 2.4rem;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 0.6rem;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  input[type='checkbox'] {
+    position: relative;
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1rem;
+    padding: 0;
+    border: 2px solid $color-brand;
+    border-radius: 0;
+    cursor: pointer;
+    appearance: none;
+
+    &::after {
+      position: absolute;
+      display: none;
+      content: '';
+    }
+
+    &:checked::after {
+      top: -0.4rem;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 0.8rem;
+      height: 1.2rem;
+      margin: auto;
+      border: solid $color-brand;
+      border-width: 0 0.2rem 0.2rem 0;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.btn p {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    padding: 2rem 6.2rem;
+    color: $color-error;
+    background-color: $color-brand;
+
+    &:disabled {
+      opacity: 0.2;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+}

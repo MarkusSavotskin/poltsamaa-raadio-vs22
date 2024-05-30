@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_654bcf4601062",
+    "title": "Jalus",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Jalus",
+    "menu_slug": "jalus",
+    "parent_slug": "teema-seaded",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "Jalus",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "update_button": "Uuenda",
+    "updated_message": "Jaluse seaded on uuendatud",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "_parent": 30,
+    "modified": 1699467098
+}

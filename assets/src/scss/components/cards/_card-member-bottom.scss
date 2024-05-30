@@ -1,0 +1,33 @@
+.card {
+  &__member-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    &--image {
+      width: 100%;
+      max-width: 20rem;
+      height: 20rem;
+      object-fit: cover;
+      background-color: $color-white;
+      border-radius: $border-round;
+      box-shadow: 0 .4rem 2rem 0 rgba(0, 0, 0, .1);
+
+      @include small {
+        max-width: 10rem;
+        max-height: 10rem;
+      }
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &--title {
+      text-align: center;
+    }
+  }
+}

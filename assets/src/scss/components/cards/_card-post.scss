@@ -1,0 +1,51 @@
+.card {
+  &__post {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: 2rem;
+    box-shadow: 0 .4rem 2rem 0 rgba(0, 0, 0, .1);
+
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+
+      .card__post--image {
+        transform: scale(1.04);
+      }
+
+      .card__post--title {
+        color: $color-secondary;
+      }
+    }
+
+    &--image-wrapper {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 1rem 1rem 0 0;
+    }
+
+    &--image {
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &--content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 4rem 2rem;
+    }
+
+    &--title {
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+}

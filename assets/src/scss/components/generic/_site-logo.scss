@@ -1,0 +1,9 @@
+ .logo img {
+   max-width: 13rem;
+   height: auto;
+   margin-top: 5.2rem;
+
+   @include medium {
+    margin: 0;
+   }
+ }

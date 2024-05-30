@@ -1,0 +1,287 @@
+{
+    "key": "group_654bcf87a63a4",
+    "title": "Jaluse seaded",
+    "fields": [
+        {
+            "key": "field_654bd608d5cb6",
+            "label": "Väljad",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_654bd3c530a12",
+            "label": "Jaluse sektsioonid",
+            "name": "footer_sections",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Lisa uus sektsioon",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66110d97f1da5",
+                    "label": "Jaluse sektsiooni tüüp",
+                    "name": "footer_section_type",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "info": "Info",
+                        "logo": "Logo",
+                        "image": "Pilt"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_654bd3c530a12"
+                },
+                {
+                    "key": "field_654bd4b830a14",
+                    "label": "Jaluse sektsiooni pealkiri",
+                    "name": "footer_section_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66110d97f1da5",
+                                "operator": "==",
+                                "value": "info"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_654bd3c530a12"
+                },
+                {
+                    "key": "field_66110c52f1da1",
+                    "label": "Jaluse sektsiooni väljad",
+                    "name": "footer_section_fields",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66110d97f1da5",
+                                "operator": "==",
+                                "value": "info"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 1,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Lisa uus väli",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_66110c52f1da2",
+                            "label": "Jaluse välja tüüp",
+                            "name": "footer_field_type",
+                            "aria-label": "",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "30",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "link": "Link",
+                                "phone": "Telefoninumber",
+                                "email": "E-posti aadress",
+                                "text": "Tekst"
+                            },
+                            "default_value": false,
+                            "return_format": "value",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "parent_repeater": "field_66110c52f1da1"
+                        },
+                        {
+                            "key": "field_66110c52f1da3",
+                            "label": "Jaluse välja tekst",
+                            "name": "footer_field_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66110c52f1da2",
+                                        "operator": "==",
+                                        "value": "phone"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_66110c52f1da2",
+                                        "operator": "==",
+                                        "value": "email"
+                                    }
+                                ],
+                                [
+                                    {
+                                        "field": "field_66110c52f1da2",
+                                        "operator": "==",
+                                        "value": "text"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "70",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_66110c52f1da1"
+                        },
+                        {
+                            "key": "field_66110c52f1da4",
+                            "label": "Jaluse välja link",
+                            "name": "footer_field_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_66110c52f1da2",
+                                        "operator": "==",
+                                        "value": "link"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "70",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_66110c52f1da1"
+                        }
+                    ],
+                    "parent_repeater": "field_654bd3c530a12"
+                },
+                {
+                    "key": "field_66110e632a66d",
+                    "label": "Jaluse sektsiooni pilt",
+                    "name": "footer_section_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_66110d97f1da5",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_654bd3c530a12"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "jalus"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "- THEME SETTINGS",
+    "show_in_rest": 0,
+    "modified": 1713111812
+}

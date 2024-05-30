@@ -1,0 +1,115 @@
+.site-header {
+  z-index: 10;
+
+  &__hamburger {
+    display: none;
+
+    @include medium {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &__button {
+      position: relative;
+      z-index: 50;
+      cursor: pointer;
+
+      &.active {
+        .site-header {
+          &__hamburger {
+            &--line {
+              transform: scaleX(0);
+            }
+
+            &--close {
+              &::before {
+                transform: scaleY(1);
+                transition-delay: 0.4s;
+              }
+
+              &::after {
+                transform: scaleX(1);
+                transition-delay: 0.55s;
+              }
+            }
+          }
+        }
+      }
+
+      &:not(.sticky):not(&--home) {
+        .site-header {
+          &__hamburger {
+            &--line {
+              background-color: $color-brand;
+            }
+          }
+        }
+      }
+    }
+
+    &--line {
+      display: block;
+      width: 40px;
+      height: 4px;
+      margin-bottom: 1rem;
+      background-color: $color-white;
+      transform-origin: left;
+      transition: transform 0.2s ease-in-out;
+
+      &:nth-child(3) {
+        margin: 0;
+      }
+    }
+
+    @for $i from 1 through 4 {
+      &--line {
+        &:nth-child(#{$i}) {
+          transition-delay: 0.1s * $i;
+        }
+      }
+    }
+
+    &--close {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 40px;
+      height: 40px;
+      transform: rotate(-45deg) translateX(-50%) translateY(-50%);
+      transform-origin: top left;
+
+      &::before,
+      &::after {
+        position: absolute;
+        display: block;
+        background-color: $color-white;
+        transition: transform 0.2s ease-in-out;
+        content: '';
+      }
+
+      &::before {
+        top: 0;
+        left: 50%;
+        width: 3px;
+        height: 40px;
+        margin-left: -1px;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition-delay: 0.1s;
+      }
+
+      &::after {
+        top: 50%;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        margin-top: -.2rem;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition-delay: 0;
+      }
+    }
+  }
+}
